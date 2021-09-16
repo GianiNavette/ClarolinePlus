@@ -1,0 +1,136 @@
+/*
+    Auther: Abdelrhman Said
+*/
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+.wrapper {
+  display: inline-flex;
+}
+
+.wrapper .icon {
+  position: relative;
+  background-color: #ffffff;
+  border-radius: 50%;
+  padding: 15px;
+  margin: 10px;
+  width: 50px;
+  height: 50px;
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+.wrapper .icon button {
+    width: 50px;
+    height: 50px;
+    border:none;
+    position: relative;
+    background-color: #ffffff;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+
+.wrapper .icon a svg {
+    margin-top: 10px;
+    padding: 10px;
+    width: 50px;
+    height: 50px;
+   
+  }
+  .wrapper .icon button svg {
+    padding: 3px;
+    margin-top: 6px;
+    width: 50px;
+    height: 50px;
+   
+  }
+.wrapper .tooltip {
+  position: absolute;
+  top: 0;
+  font-size: 14px;
+  background-color: #ffffff;
+  color: #ffffff;
+  padding: 5px 8px;
+  border-radius: 5px;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper .tooltip::before {
+  position: absolute;
+  content: "";
+  height: 8px;
+  width: 8px;
+  background-color: #ffffff;
+  bottom: -3px;
+  left: 50%;
+  transform: translate(-50%) rotate(45deg);
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper .icon:hover .tooltip {
+  top: -45px;
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.wrapper .icon:hover span,
+.wrapper .icon:hover .tooltip {
+  text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.1);
+}
+
+.wrapper .download:hover,
+.wrapper .download:hover .tooltip,
+.wrapper .download:hover .tooltip::before {
+  background-color: #3b9962;
+  color: #ffffff;
+}
+
+.wrapper .view:hover,
+.wrapper .view:hover button,
+.wrapper .view:hover .tooltip,
+.wrapper .view:hover .tooltip::before {
+  background-color: #46c1f6;
+  color: #ffffff;
+}
+canvas#the-canvas{
+    transition: transform 200ms ease-in-out;
+}
+
+.pdf-btn {
+    background-color: #262626;
+    color:#999;
+    border:none;
+    font-weight: bold;
+    font-size: 20px;
+    border-radius: 50%;
+    transition:background-color 200ms ease;
+}
+.pdf-btn:hover {
+    color:white;
+    background-color: #444444;
+}
+input.claco-input {
+    margin: auto 0px;
+    height: 40px;
+}
+
+
+nav.page-actions {
+    display: flex;
+    align-items: center;
+}
