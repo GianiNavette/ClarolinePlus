@@ -1,3 +1,21 @@
+// Dark Mode
+chrome.storage.sync.get('darkMode', function (items) {
+
+    if (items['darkMode']) {
+        var cssId = 'myCss';  // you could encode the css path itself to generate id..
+        if (!document.getElementById(cssId)) {
+            var head = document.getElementsByTagName('head')[0];
+            var link = document.createElement('link');
+            link.id = cssId;
+            link.rel = 'stylesheet';
+            link.type = 'text/css';
+            link.href = '/darkModes.css';
+            link.media = 'all';
+            head.appendChild(link);
+        }
+    }
+});
+
 if (window.location.pathname.split('/')[1] == "resource") {
     var navBar;
     try {
@@ -131,13 +149,3 @@ if (window.location.pathname.split('/')[1] == "resource") {
 
 }
 
-// Dark Mode
-chrome.storage.sync.get('darkMode', function (items) {
-
-    if (items['darkMode']) {
-        let theme = '.panel-body p, .panel-body p span { color: #ffffffe3!important; } .panel-footer { background-color:black; }.panel.panel-default { background-color:black; border:none; } .panel-heading { background-color:black!important; color: #ffffffe3!important; } .navbar.navbar-default { background-color: #1b1b1b; color: white; border: none; } b {color: #ffffffe3;} body {background-color: #121212; }body.claroline-app.left-bar-push { background-color: #121212; } h1 { color: #ffffffe3; } div#left-bar { background-color:black; } .list-group-item { background-color:black!important } .list-group-item:hover { color:#94c11f!important } #top_bar, .top-bar { border:none; } ul.breadcrumb { background-color:black; } .dropdown-menu { background-color:black!important; } .dropdown-menu span { color:#ffffffe3; } input { color:white!important; font-weight:bold; border:none; background-color:black!important; } footer#footer { background-color:black!important; } .row { background-color: black; }';
-        var style = document.createElement("style");
-        style.innerHTML = theme;
-        document.body.appendChild(style);
-    }
-});

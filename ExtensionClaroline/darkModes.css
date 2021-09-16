@@ -1,0 +1,108 @@
+li.widget.gridster-item-content.ng-scope.gridster-item {
+	background-color: black!important;
+	color: white!important;
+}
+
+.widget-content.panel-body.ng-binding {
+	background-color: black!important;
+}
+
+div#wrap {
+	background-color: #121212!important;
+}
+
+.login-container.login-with-sso div {
+	background-color: black!important;
+}
+
+.panel-body p,
+.panel-body p span {
+	color: #ffffffe3!important;
+}
+
+.panel-footer {
+	background-color: black!important;
+}
+
+.panel.panel-default {
+	background-color: black!important;
+	border: none;
+}
+
+.panel-heading {
+	background-color: black!important;
+	color: #ffffffe3!important;
+}
+
+.navbar.navbar-default {
+	background-color: #1b1b1b;
+	color: white;
+	border: none;
+}
+
+b {
+	color: #ffffffe3;
+}
+
+body {
+	background-color: #121212;
+}
+
+body.claroline-app.left-bar-push {
+	background-color: #121212;
+}
+
+h1 {
+	color: #ffffffe3;
+}
+
+div#left-bar {
+	background-color: black;
+}
+
+.list-group-item {
+	background-color: black!important
+}
+
+.list-group-item:hover {
+	color: #94c11f!important
+}
+
+#top_bar,
+.top-bar {
+	border: none;
+}
+
+ul.breadcrumb {
+	background-color: black;
+}
+
+.dropdown-menu {
+	background-color: black!important;
+}
+
+.dropdown-menu span {
+	color: #ffffffe3;
+}
+
+input {
+	color: white!important;
+	font-weight: bold;
+	border: none;
+	background-color: black!important;
+}
+
+footer#footer {
+	background-color: black!important;
+}
+
+.row {
+	background-color: black;
+}
+
+.widget-content {
+    background-color: black!important;
+}
+.widget-content.panel-body.ng-binding {
+    background-color:black!important;
+}
