@@ -3,9 +3,6 @@
     "name": "Claroline+",
     "version": "1.0.1",
     "description": "Claroline+ permet de rendre Claroline encore plus utile ! Dark mode, sauvegarde, tourner pdf et + encore !",
-    "host_permissions": [
-        "*://*.clarolineconnect.univ-lyon1.fr/*"
-    ],
     "permissions": [
         "storage"
     ],
@@ -19,6 +16,16 @@
             ],
             "css": [
                 "claro.css"
+            ]
+        }
+    ],
+    "web_accessible_resources": [
+        {
+            "resources": [
+                "darkModes.css"
+            ],
+            "matches": [
+                "*://*.clarolineconnect.univ-lyon1.fr/*"
             ]
         }
     ],

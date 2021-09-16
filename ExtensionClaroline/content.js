@@ -2,17 +2,12 @@
 chrome.storage.sync.get('darkMode', function (items) {
 
     if (items['darkMode']) {
-        var cssId = 'myCss';  // you could encode the css path itself to generate id..
-        if (!document.getElementById(cssId)) {
-            var head = document.getElementsByTagName('head')[0];
-            var link = document.createElement('link');
-            link.id = cssId;
-            link.rel = 'stylesheet';
-            link.type = 'text/css';
-            link.href = '/darkModes.css';
-            link.media = 'all';
-            head.appendChild(link);
-        }
+
+        var style = document.createElement('link');
+        style.rel = 'stylesheet';
+        style.type = 'text/css';
+        style.href = chrome.runtime.getURL("darkModes.css");;
+        (document.head || document.documentElement).appendChild(style);
     }
 });
 
