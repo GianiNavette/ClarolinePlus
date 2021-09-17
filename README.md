@@ -34,6 +34,6 @@ _HTTPS_
 
 `git clone https://github.com/GianiNavette/ClarolinePlus.git`.
 
-- Zipper le dossier ExtensionClaroline
-
 > Dans Chrome, ouvrez la page d'extension du navigateur Chrome en cliquant sur Outils complémentaires > Extensions. Cochez la case Mode Développeur. Cliquez sur le bouton Charger l'extension non empaquetée
+
+- Selectionner dossier ExtensionClaroline
