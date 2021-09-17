@@ -32,7 +32,7 @@
 
 _HTTPS_
 
-\*`git clone https://github.com/GianiNavette/ClarolinePlus.git `.
+`git clone https://github.com/GianiNavette/ClarolinePlus.git`.
 
 - Zipper le dossier ExtensionClaroline
 
