@@ -1,55 +1,54 @@
 body {
-    background-color: black;
-    width: 300px;
+  background-color: black;
+  width: 300px;
 }
 header {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-header img{
-   width: 50px;
-   height: 50px;
+header img {
+  width: 50px;
+  height: 50px;
 }
-header h1{
-    color:white;
-    font-family: 'Rubik', sans-serif;
- }
+header h1 {
+  color: white;
+  font-family: "Rubik", sans-serif;
+}
 
 .option-item {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
-.option-item h2{
-    font-family: 'Rubik', sans-serif,italic;
-    color:white;
-    display: flex;
+.option-item h2 {
+  font-family: "Rubik", sans-serif, italic;
+  color: white;
+  display: flex;
 }
 a {
-    font-family: 'Rubik', sans-serif;
+  font-family: "Rubik", sans-serif;
 }
 a:nth-child(1) {
-    color:white;
-     background-color: #ab151d;
-     padding:0em 0.5em;
- }
+  color: white;
+  background-color: #4d4d4d;
+  padding: 0em 0.5em;
+}
 a:nth-child(2) {
-   color:white;
-    background-color: #6b15ab;
-    padding:0em 0.5em;
+  color: white;
+  background-color: #6b15ab;
+  padding: 0em 0.5em;
 }
 a:nth-child(3) {
-    color:white;
-     background-color: #33ab15;
-     padding:0em 0.5em;
- }
- .a-propos {
-     display: flex;
- }
- .info {
-     color:white;
-     font-family: 'Rubik', sans-serif,italic;
- }
+  color: white;
+  background-color: #33ab15;
+  padding: 0em 0.5em;
+}
+.a-propos {
+  display: flex;
+}
+.info {
+  color: white;
+  font-family: "Rubik", sans-serif, italic;
+}
