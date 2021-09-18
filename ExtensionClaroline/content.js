@@ -132,5 +132,37 @@ if (window.location.pathname.split("/")[1] == "resource") {
       pdf.setAttribute("data-rad", valueTransform);
       pdf.style.transform = "rotate(" + valueTransform + "deg)";
     });
+    /// bouton pour detacher le pdf
+    var detach = document.createElement("button");
+    detach.innerHTML = "&#10529;";
+    detach.setAttribute("class", "pdf-btn");
+    document
+      .querySelector(".pdf-zoom")
+      .insertAdjacentElement("afterbegin", detach);
+
+    detach.addEventListener("click", function () {
+      var pdfViewer = document.querySelector("canvas#the-canvas");
+
+      var img = pdfViewer.toDataURL("image/png");
+
+      var buttonNext = document.querySelector(".pdf-pages .btn:nth-child(2)");
+      buttonNext.click();
+      var nbrPages = document.querySelector(".pdf-pages").textContent;
+      nbrPages = nbrPages.replace(/\D+/g, "");
+
+      console.log(nbrPages);
+
+      var head =
+        '<!DOCTYPE html> <html lang="fr"><head><title>' +
+        document.querySelector(".page-header h1").innerHTML +
+        '</title></head>"';
+      var style =
+        "<style>nbody {background-color:black;} img {width:100%;}</style>";
+      var myWindow = window.open("", "", "width=200,height=100");
+      var doc = myWindow.document;
+      doc.open();
+      doc.write(style + '<img src="' + img + '"/>');
+      doc.close();
+    });
   }
 }
