@@ -132,6 +132,7 @@ if (window.location.pathname.split("/")[1] == "resource") {
       pdf.setAttribute("data-rad", valueTransform);
       pdf.style.transform = "rotate(" + valueTransform + "deg)";
     });
+
     /// bouton pour detacher le pdf
     var detach = document.createElement("button");
     detach.innerHTML = "&#10529;";
@@ -145,24 +146,69 @@ if (window.location.pathname.split("/")[1] == "resource") {
 
       var img = pdfViewer.toDataURL("image/png");
 
-      var buttonNext = document.querySelector(".pdf-pages .btn:nth-child(2)");
-      buttonNext.click();
-      var nbrPages = document.querySelector(".pdf-pages").textContent;
-      nbrPages = nbrPages.replace(/\D+/g, "");
-
-      console.log(nbrPages);
-
       var head =
         '<!DOCTYPE html> <html lang="fr"><head><title>' +
         document.querySelector(".page-header h1").innerHTML +
         '</title></head>"';
       var style =
         "<style>nbody {background-color:black;} img {width:100%;}</style>";
-      var myWindow = window.open("", "", "width=200,height=100");
+      var myWindow = window.open("", "", "width=400,height=200");
       var doc = myWindow.document;
       doc.open();
       doc.write(style + '<img src="' + img + '"/>');
       doc.close();
+    });
+
+    /// bouton pour detacher tout le pdf
+    var detach = document.createElement("button");
+    var detachImg = document.createElement("img");
+    detachImg.setAttribute("src", chrome.runtime.getURL("detachAll.png"));
+    detach.appendChild(detachImg);
+
+    detach.setAttribute("class", "pdf-btn");
+    document
+      .querySelector(".pdf-zoom")
+      .insertAdjacentElement("afterbegin", detach);
+
+    detach.addEventListener("click", function () {
+      var pdfViewer = document.querySelector("canvas#the-canvas");
+
+      var inputPage = document.querySelector(".pdf-pages input");
+      inputPage.value = 1;
+      // Create a new 'change' event
+      var event = new Event("change");
+
+      // Dispatch it.
+      inputPage.dispatchEvent(event);
+
+      //var buttonPrev = document.querySelector(".pdf-pages .btn:nth-child(1)");
+      var buttonNext = document.querySelector(".pdf-pages .btn:nth-child(2)");
+      var nbrPages = document.querySelector(".pdf-pages").textContent;
+      nbrPages = nbrPages.replace(/\D+/g, "");
+      nbrPages = parseInt(nbrPages);
+
+      var allPages = "";
+
+      for (let i = 1; i <= nbrPages; i++) {
+        setTimeout(function timer() {
+          var img = pdfViewer.toDataURL("image/png");
+          allPages += '<img src="' + img + '"/>';
+          buttonNext.click();
+        }, i * 200);
+      }
+      setTimeout(function () {
+        var head =
+          '<!DOCTYPE html> <html lang="fr"><head><title>' +
+          document.querySelector(".page-header h1").innerHTML +
+          '</title></head>"';
+        var style =
+          "<style>body {background-color:black;display:flex;flex-direction:column;} img {width:100%;}</style>";
+        var myWindow = window.open("", "", "width=800,height=500");
+        var doc = myWindow.document;
+        doc.open();
+        doc.write(style + allPages);
+        doc.close();
+      }, 200 * nbrPages);
     });
   }
 }

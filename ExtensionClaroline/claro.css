@@ -26,35 +26,33 @@
   transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
 .wrapper .icon button {
-    width: 50px;
-    height: 50px;
-    border:none;
-    position: relative;
-    background-color: #ffffff;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
-    cursor: pointer;
-    transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-  }
+  width: 50px;
+  height: 50px;
+  border: none;
+  position: relative;
+  background-color: #ffffff;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
 
 .wrapper .icon a svg {
-    margin-top: 10px;
-    padding: 10px;
-    width: 50px;
-    height: 50px;
-   
-  }
-  .wrapper .icon button svg {
-    padding: 3px;
-    margin-top: 6px;
-    width: 50px;
-    height: 50px;
-   
-  }
+  margin-top: 10px;
+  padding: 10px;
+  width: 50px;
+  height: 50px;
+}
+.wrapper .icon button svg {
+  padding: 3px;
+  margin-top: 6px;
+  width: 50px;
+  height: 50px;
+}
 .wrapper .tooltip {
   position: absolute;
   top: 0;
@@ -107,30 +105,33 @@
   background-color: #46c1f6;
   color: #ffffff;
 }
-canvas#the-canvas{
-    transition: transform 200ms ease-in-out;
+canvas#the-canvas {
+  transition: transform 200ms ease-in-out;
 }
 
 .pdf-btn {
-    background-color: #262626;
-    color:#999;
-    border:none;
-    font-weight: bold;
-    font-size: 20px;
-    border-radius: 50%;
-    transition:background-color 200ms ease;
+  background-color: #262626;
+  color: #999;
+  border: none;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 50%;
+  transition: background-color 200ms ease;
 }
 .pdf-btn:hover {
-    color:white;
-    background-color: #444444;
+  color: white;
+  background-color: #444444;
 }
 input.claco-input {
-    margin: auto 0px;
-    height: 40px;
+  margin: auto 0px;
+  height: 40px;
 }
 
-
 nav.page-actions {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
+}
+
+button.pdf-btn img {
+  width: 18px;
 }
