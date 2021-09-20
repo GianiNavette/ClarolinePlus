@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "Claroline+",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Claroline+ permet de rendre Claroline encore plus utile ! Dark mode, sauvegarde, tourner pdf et + encore !",
   "permissions": ["storage"],
   "content_scripts": [

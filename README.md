@@ -13,12 +13,15 @@
 
 ## Fonctionnalitées
 
+** NOUVEAU : PICTURE IN PICTURE **
+
 >
 
 - Dark Mode. 🌙
 - Sauvegarde fichier avancé. 📁
 - Voir fichier 👁‍🗨
 - Tourner pdf 🔄
+- picture in picture (1 page ou tout le pdf)
 - Fonctionne avec tous les types de fichiers.
 - Modifications des noms des fichiers pre-sauvegarde.
 
@@ -28,7 +31,7 @@
 
 **[Chrome extension](https://chrome.google.com/webstore/detail/claroline%2B/lgcelncanillgebhkofpdcdklmbhlipc/related?hl=fr)**
 
-**Manual install **
+** Manual install **
 
 _HTTPS_
 
